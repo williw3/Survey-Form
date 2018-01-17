@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Advanced Validation Example</title>
+  	{% load static %}
+  <link rel="stylesheet" href="{% static 'survey/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+<h3>Survey Form</h3>
+
+<div>
+  <form action="/survey/process" method="POST">
+  	{% csrf_token %}
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for='Location'>Dojo Location:</label>
+    <select name='location'>
+    	<option value='Seattle'>Seattle</option>
+    	<option value='Washington DC'>Washington DC</option>
+    	<option value='Los Angeles'>Los Angeles</option>
+    	<option value='Silicon Valley'>Silicon Valley</option>
+    	<option value='Dallas'>Dallas</option>
+    	<option value='Chicago'>Chicago</option>
+    	<option value='Tulsa'>Tulsa</option>
+    </select><br>
+
+    <label for="language">Favorite Language:</label>
+    <input type="text" id="language" name="language" placeholder="Favorite language..">
+  
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+
+</body>
+</html>
+
+</body>
+</html>
